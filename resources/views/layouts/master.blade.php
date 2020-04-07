@@ -22,7 +22,7 @@
                 Filmy
             </a>
         </div>
-        @if (Auth::user()->isAdmin())
+        @if (Auth::check() && Auth::user()->isAdmin())
             <div class="text-sm">
                 <a href="{{ route('movie_add') }}"
                    class="block mt-4 lg:inline-block lg:mt-0 text-red-100 hover:text-white mr-4">
